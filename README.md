@@ -33,15 +33,32 @@ Este projeto, **App-CLI-Finance**, é um gerenciador financeiro com interface gr
    cd App-CLI-Finance
    ```
 
-2. **Instale as Dependências**:
-   Certifique-se de ter o Python 3.8+ instalado. Em seguida, execute:
+2. **Crie um Ambiente Virtual**:
+   Certifique-se de ter o Python 3.8+ instalado. Em seguida, crie e ative um ambiente virtual:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+   No Windows:
+   ```cmd
+   venv\Scripts\activate
+   ```
+
+3. **Instale as Dependências**:
+   Com o ambiente virtual ativado, execute:
    ```bash
    pip install PyQt5 pandas matplotlib seaborn
    ```
 
-3. **Execute o Aplicativo**:
+4. **Execute o Aplicativo**:
    ```bash
    python finance_cli.py
+   ```
+
+5. **Desative o Ambiente Virtual (opcional)**:
+   Após terminar de usar o aplicativo, desative o ambiente virtual:
+   ```bash
+   deactivate
    ```
 
 ---
