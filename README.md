@@ -7,15 +7,18 @@ Este projeto, **App-CLI-Finance**, é um gerenciador financeiro com interface gr
 ## 📋 Funcionalidades
 
 - **Gerenciamento de Transações**:
+
   - Adicione receitas ou despesas.
   - Classifique as transações por categorias como `Alimentação`, `Transporte`, `Moradia`, entre outras.
   - Visualize transações em uma tabela dinâmica.
 
 - **Definição de Metas**:
+
   - Configure metas de gastos por categoria.
   - Acompanhe o progresso em relação às metas definidas.
 
 - **Relatórios e Gráficos**:
+
   - Geração de relatórios de gastos mensais e por categoria.
   - Visualização de gráficos de pizza e barra para distribuição de despesas.
 
@@ -28,6 +31,7 @@ Este projeto, **App-CLI-Finance**, é um gerenciador financeiro com interface gr
 ## 🚀 Como Executar
 
 1. **Clone o Repositório**:
+
    ```bash
    git clone https://github.com/LuisT-ls/App-CLI-Finance.git
    cd App-CLI-Finance
@@ -35,22 +39,27 @@ Este projeto, **App-CLI-Finance**, é um gerenciador financeiro com interface gr
 
 2. **Crie um Ambiente Virtual**:
    Certifique-se de ter o Python 3.8+ instalado. Em seguida, crie e ative um ambiente virtual:
+
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    ```
+
    No Windows:
+
    ```cmd
    venv\Scripts\activate
    ```
 
 3. **Instale as Dependências**:
    Com o ambiente virtual ativado, execute:
+
    ```bash
    pip install PyQt5 pandas matplotlib seaborn
    ```
 
 4. **Execute o Aplicativo**:
+
    ```bash
    python finance_cli.py
    ```
@@ -66,7 +75,25 @@ Este projeto, **App-CLI-Finance**, é um gerenciador financeiro com interface gr
 ## ⚠️ Problemas Conhecidos
 
 - **Erro na Geração de Relatórios**:
+
   - A função de geração de relatórios apresenta inconsistências, como a não exibição correta de gráficos ou erros em algumas situações. Esta funcionalidade necessita de aprimoramento.
+
+- **Erro Qt: "Could not find the Qt platform plugin \"xcb\""**:
+  - Este erro ocorre em sistemas baseados em Linux devido a dependências do sistema ausentes. Para resolver:
+    1. Instale as dependências necessárias:
+       ```bash
+       sudo apt update
+       sudo apt install libxcb-xinerama0 libxcb-xinerama0-dev libxkbcommon-x11-0
+       ```
+    2. Adicione a seguinte variável de ambiente no início do código `finance_cli.py`:
+       ```python
+       import os
+       os.environ["QT_QPA_PLATFORM"] = "xcb"
+       ```
+    3. Verifique se o PyQt5 está corretamente instalado no ambiente virtual:
+       ```bash
+       pip install PyQt5 PyQt5-sip PyQt5-Qt5
+       ```
 
 Se você identificar problemas ou melhorias, sinta-se à vontade para abrir uma **issue** ou enviar um **pull request**.
 
@@ -92,11 +119,12 @@ Desenvolvido por **LuisT-ls**
 
 ## 🤝 Contribuições
 
-Contribuições são bem-vindas!  
-1. Faça um **fork** do projeto.  
-2. Crie um **branch** para sua feature (`git checkout -b minha-feature`).  
-3. Faça um **commit** das alterações (`git commit -m 'Adicionei uma nova feature'`).  
-4. Envie o **push** para o branch (`git push origin minha-feature`).  
-5. Abra um **Pull Request** no GitHub.  
+Contribuições são bem-vindas!
+
+1. Faça um **fork** do projeto.
+2. Crie um **branch** para sua feature (`git checkout -b minha-feature`).
+3. Faça um **commit** das alterações (`git commit -m 'Adicionei uma nova feature'`).
+4. Envie o **push** para o branch (`git push origin minha-feature`).
+5. Abra um **Pull Request** no GitHub.
 
 Aguardo suas ideias e melhorias! 🎉
