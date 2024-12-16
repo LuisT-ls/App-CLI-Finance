@@ -1,0 +1,21 @@
+{
+    "transacoes": [
+        {
+            "data": "2024-12-16",
+            "valor": -66.0,
+            "categoria": "Alimenta\u00e7\u00e3o",
+            "descricao": "Pizza",
+            "tipo": "despesa"
+        }
+    ],
+    "categorias": {
+        "Alimenta\u00e7\u00e3o": 66.0,
+        "Transporte": 0,
+        "Moradia": 0,
+        "Entretenimento": 0,
+        "Educa\u00e7\u00e3o": 0,
+        "Sa\u00fade": 0,
+        "Outros": 0
+    },
+    "metas": {}
+}
